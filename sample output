@@ -1,0 +1,111 @@
+
+
+# 📚 Library Management System (Java OOP)
+
+A simple **Library Management System** built using **Java OOP concepts**.
+It allows users to:
+
+* View available books
+* Issue books
+* Return books
+
+---
+
+## 🛠️ Features
+
+* Object-Oriented Design (`Book`, `User`, `Library` classes)
+* Book issue and return functionality
+* Menu-driven program using `Scanner`
+* Simple and beginner-friendly code
+
+---
+
+## 📂 Project Structure
+
+```
+LibraryClasses.java     # Contains Book, User, and Library classes
+LibraryManagement.java  # Main file with menu (Scanner input)
+```
+
+---
+
+## ▶️ How to Run
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/SourishPati04/Library-Management-System.git
+   cd library-management-system
+   ```
+2. Compile the Java files
+
+   ```bash
+   javac LibraryClasses.java LibraryManagement.java
+   ```
+3. Run the program
+
+   ```bash
+   java LibraryManagement
+   ```
+
+---
+
+## 🧑‍💻 Example Menu
+
+```
+===== Library Menu =====
+1. Show all books
+2. Issue a book
+3. Return a book
+4. Exit
+```
+
+---
+
+## 📌 Sample Output
+
+```
+Enter your name: Sourish
+
+===== Library Menu =====
+1. Show all books
+2. Issue a book
+3. Return a book
+4. Exit
+Enter your choice: 1
+
+📚 Books in Library:
+The Alchemist by Paulo Coelho [Available]
+1984 by George Orwell [Available]
+Java Programming by James Gosling [Available]
+
+===== Library Menu =====
+Enter your choice: 2
+Enter book title to issue: 1984
+Sourish issued: 1984
+
+===== Library Menu =====
+Enter your choice: 1
+
+📚 Books in Library:
+The Alchemist by Paulo Coelho [Available]
+1984 by George Orwell [Issued]
+Java Programming by James Gosling [Available]
+
+===== Library Menu =====
+Enter your choice: 3
+Enter book title to return: 1984
+Sourish returned: 1984
+```
+
+---
+
+## 📖 Concepts Used
+
+* Classes & Objects
+* Encapsulation (private fields + getters/setters)
+* ArrayList for book storage
+* Basic input handling with `Scanner`
+
+
+
