@@ -1,0 +1,84 @@
+/*LibraryClasses.java → contains classes Book, User, and Library */
+
+
+package Library_Management_System;
+
+import java.util.ArrayList;
+
+class Book{
+    private String title;
+    private String author;
+    private boolean issued;
+
+    public Book(String title, String author){
+        this.title = title;
+        this.author = author;
+        this.issued = issued;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+    public boolean isIssued(){
+        return issued;
+    }
+    public void issue(){
+        issued = true;
+    }
+    public void returnBook(){
+        issued = false;
+    }
+
+    @Override
+    public String toString(){
+        return title + " by " + author + (issued ? " [Issued]" : " [Available]");
+    }
+}
+
+class User{
+    private String name;
+
+    public User(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+}
+
+class Library{
+    private ArrayList<Book> books  = new ArrayList<>();
+
+    public void addBook(Book book){
+        books.add(book);
+    }
+
+    public void showBooks(){
+        for(Book b : books){
+            System.out.println(b);
+        }
+    }
+
+    public void issueBook(String title, User user){
+        for(Book b : books){
+            if(b.getTitle().equalsIgnoreCase(title)&& !b.isIssued()){
+                b.issue();
+                System.out.println(user.getName() + "issued: "+ title);
+                return;
+            }
+        }
+        System.out.println("Book not available: " + title);
+    }
+    public void returnBook(String title, User user){
+        for(Book b : books){
+            if(b.getTitle().equalsIgnoreCase(title)&& b.isIssued()){
+                b.returnBook();
+                System.out.println(user.getName() + "returned: "+ title);
+                return;
+            }
+        }
+        System.out.println("Book not found or not issued: " + title);
+    }
+}
+
+
