@@ -1,9 +1,6 @@
 # Library-Management-System #
 
-Got it 🚀
-Here’s a **short and clean README.md** you can use for your GitHub repo:
 
----
 
 # 📚 Library Management System (Java OOP)
 
@@ -39,7 +36,7 @@ LibraryManagement.java  # Main file with menu (Scanner input)
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/your-username/library-management-system.git
+   git clone https://github.com/SourishPati04/Library-Management-System.git
    cd library-management-system
    ```
 2. Compile the Java files
